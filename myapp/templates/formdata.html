@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+
+{% block misc %}
+
+
+<form method="POST" action="{% url 'formdata' %}">
+    {% csrf_token %}
+
+    {{form}}
+    <button type="submit">submit</button>
+</form>
+
+
+
+{% endblock %}
+

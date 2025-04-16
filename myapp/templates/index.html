@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{%  block misc %}
+
+
+    <div>
+        This is the landing page
+    </div>
+
+    <a href="{% url 'formdata' %}">formdata</a>
+
+    
+    {% for book in data.items %}
+    <li>{{book.volumeInfo.title}}</li>
+    {% endfor %}
+
+{% endblock %}
